@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name – Digital Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#0d47a1;  /* CU‑Boulder dark blue accent */
+      --light:#f5f7fa;
+      --dark:#1e1e1e;
+      --max-width:960px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
+    body{background:var(--light);color:var(--dark);line-height:1.6;}
+    header{background:var(--primary);color:#fff;}
+    .container{max-width:var(--max-width);margin:auto;padding:1rem 1.25rem;}
+    nav{display:flex;justify-content:space-between;align-items:center;}
+    nav a.logo{font-weight:700;font-size:1.25rem;color:#fff;text-decoration:none;}
+    nav ul{display:flex;gap:1rem;list-style:none;}
+    nav ul li a{color:#fff;text-decoration:none;font-weight:600;transition:opacity .2s ease;}
+    nav ul li a:hover{opacity:.8;}
+    /* Mobile Nav */
+    #nav-toggle{display:none;}
+    label[for="nav-toggle"]{display:none;font-size:1.5rem;color:#fff;cursor:pointer;}
+
+    @media(max-width:640px){
+      nav ul{flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--primary);display:none;padding:1rem 0;}
+      nav ul.show{display:block;}
+      label[for="nav-toggle"]{display:block;}
+    }
+
+    section{padding:3rem 0;}
+    section:nth-of-type(even){background:#fff;}
+    h2{font-size:1.75rem;margin-bottom:1rem;color:var(--primary);}    
+    .grid{display:grid;gap:1.5rem;}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    .card{background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.06);overflow:hidden;}
+    .card img{width:100%;display:block;}
+    .card-body{padding:1rem;}
+    footer{background:var(--dark);color:#fff;text-align:center;padding:1.5rem 0;}
+    footer a{color:#fff;text-decoration:none;font-weight:600;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#about" class="logo">Your Name</a>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle">☰</label>
+        <ul id="nav-menu">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#resume">Résumé</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#social">Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <div class="container">
+      <h2>Welcome / About Me</h2>
+      <p style="margin-bottom:1.5rem;max-width:680px;">Replace this paragraph with ~250–300 words introducing yourself, why this portfolio exists, and what visitors will find inside. Make it conversational but professional.</p>
+      <div class="grid grid-2">
+        <img src="https://via.placeholder.com/600x400?text=Professional+Headshot" alt="Professional headshot">
+        <img src="https://via.placeholder.com/600x400?text=You+at+Work+or+Hobby" alt="Showcasing interests">
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <div class="container">
+      <h2>Résumé / CV</h2>
+      <p>Download a printable PDF or view it inline below.</p>
+      <iframe src="https://drive.google.com/file/d/FILE_ID/preview" style="width:100%;height:680px;border:0;" title="Embedded résumé"></iframe>
+    </div>
+  </section>
+
+  <!-- Interests / Extracurricular -->
+  <section id="interests">
+    <div class="container">
+      <h2>Highlights – Interests & Extracurricular</h2>
+      <div class="grid grid-2">
+        <!-- Repeat .card for each interest -->
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=Sigma+Nu+Website" alt="Sigma Nu Website">
+          <div class="card-body">
+            <h3>Sigma Nu – Website Advisor</h3>
+            <p>Write ≥50 words describing your role, impact, and skills demonstrated.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=Crunch+Fitness" alt="Crunch Fitness Training">
+          <div class="card-body">
+            <h3>Personal Trainer at Crunch Fitness</h3>
+            <p>Another ≥50‑word description highlighting communication, coaching, etc.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=Groove+Sodas" alt="Groove Sodas">
+          <div class="card-body">
+            <h3>Groove Sodas – CTO & Co‑Founder</h3>
+            <p>Describe your startup role, web dev stack, and traction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Academics -->
+  <section id="projects">
+    <div class="container">
+      <h2>Highlights – Academics & Projects</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=SDR+Toolkit" alt="SDR Toolkit">
+          <div class="card-body">
+            <h3>NSA SDR Toolkit (Capstone)</h3>
+            <p>≥50 words summarizing goals, tech stack, and results.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=RecipEZ" alt="RecipEZ">
+          <div class="card-body">
+            <h3>RecipEZ</h3>
+            <p>≥50 words about accessibility focus, DB schema, etc.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400?text=MovieFinds" alt="MovieFinds">
+          <div class="card-body">
+            <h3>MovieFinds</h3>
+            <p>≥50 words on API integration, caching, and UX improvements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social / Connect -->
+  <section id="social">
+    <div class="container">
+      <h2>Connect</h2>
+      <ul style="list-style:none;display:grid;gap:.75rem;font-size:1.1rem;">
+        <li><a href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a> – 25‑word blurb on professional updates.</li>
+        <li><a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a> – 25‑word blurb on open‑source activity.</li>
+        <li><a href="https://instagram.com/your-handle" target="_blank" rel="noopener">Instagram</a> – Optional; describe brand alignment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('change',()=>{
+      menu.classList.toggle('show',toggle.checked);
+    });
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

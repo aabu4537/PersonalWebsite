@@ -3,60 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Alam Bushara – Portfolio of a full-stack developer and startup CTO" />
-    <title>Alam Bushara | Portfolio</title>
-    <!-- Google Fonts & Icons -->
+    <meta name="description" content="Alam Bushara – Computer Science major, full‑stack developer & startup CTO. Portfolio, projects and contact information." />
+    <title>Alam Bushara | Portfolio</title>
+
+    <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
-    <!-- Swiper stylesheet -->
+
+    <!-- Swiper (projects slider) -->
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
-    <!-- Styles remain the same -->
+
+    <!-- Base stylesheet -->
+    <link rel="stylesheet" href="assets/newcss.css" />
+
+    <!-- Quick theming -->
+    <style>
+      :root{
+        --accent:#0066ff;
+        --accent-light:#e8f0ff;
+        --bg:#f9fafb;
+        --text:#111827;
+        --radius:1rem;
+      }
+      html{scroll-behavior:smooth;}
+      body{margin:0;font-family:"Poppins",sans-serif;background:var(--bg);color:var(--text);}
+      .header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+      .nav__logo{font-weight:600;font-size:1.2rem;color:var(--accent);}
+      .nav__link:hover,.nav__link.active-link{color:var(--accent);}
+      .section{padding:4.5rem 0 3.5rem;}
+      .section__title{text-align:center;font-size:1.75rem;font-weight:600;color:var(--accent);}
+      .section__subtitle{text-align:center;font-size:.95rem;color:#6b7280;margin-bottom:2.5rem;}
+      .card{background:#fff;border-radius:var(--radius);box-shadow:0 4px 16px rgba(0,0,0,.05);transition:transform .25s ease;}
+      .card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+      .footer__bg{background:var(--accent);color:#fff;padding:3rem 0 2rem;}
+      .scrollup{position:fixed;right:1rem;bottom:1rem;background:var(--accent);color:#fff;padding:.55rem;border-radius:50%;display:none;}
+      .scrollup.show{display:grid;}
+    </style>
   </head>
-  <body>
-    <main>
-      <!-- About Section -->
-      <section id="resume" class="container">
-        <h2 class="title">Resume</h2>
-        <span class="subtitle">Professional Overview</span>
-        <div class="about">
-          <div>
-            <h3>Education</h3>
-            <p><strong>University of Colorado - Boulder</strong> | Major GPA: 3.7+<br>
-            Bachelor of Science in Computer Science, Minor in Business Management<br>
-            Graduation Date: May 2025<br>
-            Organizations: NSBE, Black Student Alliance, Sigma Nu, Theta Tau, Startup Summer<br>
-            Relevant Coursework: Algorithms, Computer Systems, Cyber-Security, Data Structures, Database Systems, HCI, Programming Languages, Software Development, Data Science, Theory of Computation, OOP, Numerical Computation, AI<br>
-            Scholarships: Sachs Foundation Scholar, CU Esteemed Scholar, CU General Engineering Scholar</p>
-          </div>
-          <div>
-            <h3>Skills</h3>
-            <p><strong>Technical:</strong> C++, JavaScript, Python, HTML, SQL, MySQL, React.js, Node.js, MongoDB, Jupyter Notebook, Git, Docker, Latex, Postman, CSS, Netlify, Software Development, UI/UX design, Axios, Agile.<br>
-            <strong>Functional:</strong> Business Strategy, Business Development, Project Management, Strategic Planning, Team Leadership, Problem Solving, Communication, Stakeholder Engagement, Product Innovation, Process Improvement, Market Analysis.</p>
+
+  <body oncontextmenu="return false">
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">Alam</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item"><a href="#home" class="nav__link active-link"><i class="uil uil-estate nav__icon"></i>Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link"><i class="uil uil-scenery nav__icon"></i>Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link"><i class="uil uil-message nav__icon"></i>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__data">
+              <h1 class="home__title">Hi, I’m Alam Bushara</h1>
+              <h3 class="home__subtitle">CS Student & Startup CTO</h3>
+              <p class="home__description">Senior at CU Boulder, passionate about full-stack dev, RF signal tools, and building accessible tech. I enjoy solving real-world problems with software and leading technical teams.</p>
+              <a href="#contact" class="button button--flex">Contact me<i class="uil uil-message button__icon"></i></a>
+            </div>
           </div>
         </div>
-        <div class="about">
-          <div>
-            <h3>Experience</h3>
-            <p><strong>Sigma Nu - Gamma Kappa</strong> | Alumni Advisory Board - Website Advisor | Oct 2024 – Present<br>
-            Advised on best practices in web design, boosting alumni engagement by 20% through strategic improvements.<br><br>
-            <strong>National Security Agency</strong> | Intern, Software | Aug 2024 – Present<br>
-            Developed an SDR toolkit for protocol analysis, reducing training costs by $400,000 per recruit, enhancing security and RF accessibility.<br><br>
-            <strong>Groove Beverages Inc.</strong> | CTO | May 2023 – Present<br>
-            Launched groovesodas.com, increasing brand visibility, secured hosting services, and ensured high performance and reliability.<br><br>
-            <strong>FrontLine Resources LLC</strong> | Intern, Software & Marketing | May – Aug 2023<br>
-            Improved sales by 15% through UX enhancements and demographic strategy.<br><br>
-            <strong>Artusa Inc.</strong> | Intern, Software | May – Aug 2022<br>
-            Integrated Google Maps API for optimized truck routing, improving logistics speed by 10% and enhancing user experience with a new web platform.</p>
+      </section>
+
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+        <div class="about__container container grid">
+          <img src="assets/img/about.jpg" alt="about image" class="about__img" loading="lazy" />
+          <div class="about__data">
+            <p class="about__description">
+              I’m a senior Computer Science major with a Business minor at CU Boulder. I’ve led startups, built internal tools for the NSA, and shipped real-world solutions in web, backend, and AI-driven UX. Currently CTO at Groove Beverages.
+            </p>
+            <div class="about__info">
+              <div><span class="about__info-title">3.7+</span><span class="about__info-name">GPA</span></div>
+              <div><span class="about__info-title">10+</span><span class="about__info-name">Projects</span></div>
+              <div><span class="about__info-title">4</span><span class="about__info-name">Internships</span></div>
+            </div>
+            <div class="about__buttons">
+              <a download href="assets/AlamBushara_CV.pdf" class="button button--flex">Download CV<i class="uil uil-import button__icon"></i></a>
+            </div>
           </div>
         </div>
-        <div class="about">
+      </section>
+
+      <section class="portfolio section" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">Notable Work</span>
+        <div class="portfolio__container container grid">
+          <div class="card">
+            <img src="assets/img/moviefinds.png" alt="MovieFinds Screenshot" class="portfolio__img" />
+            <div class="portfolio__data">
+              <h3 class="portfolio__title">MovieFinds</h3>
+              <p class="portfolio__description">
+                Movie search and review app using OMDb API and PostgreSQL backend. Users can search movies, view ratings, and submit reviews. Built with HTML/CSS/JS and server-side logic.
+              </p>
+              <a href="https://github.com/alambushara/MovieFinds" class="button button--flex button--small portfolio__button" target="_blank">
+                GitHub <i class="uil uil-arrow-right button__icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Let's connect</span>
+        <div class="contact__container container grid">
           <div>
-            <h3>Projects</h3>
-            <p><strong>MovieFinds</strong> | Feb 2023<br>
-            Created a movie search and review platform using the OMDb API with PostgreSQL. Enabled users to find detailed movie info and submit reviews. Demonstrated API integration, database management, and front-end skills.</p>
+            <div class="contact__information">
+              <i class="uil uil-phone contact__icon"></i>
+              <div><h3 class="contact__title">Call Me</h3><span class="contact__subtitle">720-381-7968</span></div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+              <div><h3 class="contact__title">Email</h3><span class="contact__subtitle">alam.bushara@gmail.com</span></div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div><h3 class="contact__title">Location</h3><span class="contact__subtitle">Centennial / Boulder, CO</span></div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div><h1 class="footer__title">Alam</h1><span class="footer__subtitle">CS Student & Developer</span></div>
+          <ul class="footer__links">
+            <li><a href="#projects" class="footer__link">Projects</a></li>
+            <li><a href="#contact" class="footer__link">Contact</a></li>
+          </ul>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/alambushara/" class="footer__social" target="_blank"><i class="uil uil-linkedin"></i></a>
+            <a href="https://github.com/alambushara" class="footer__social" target="_blank"><i class="uil uil-github"></i></a>
+          </div>
+        </div>
+        <p class="footer__copy">© <span id="year"></span> Alam Bushara. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up"><i class="uil uil-arrow-up scrollup__icon"></i></a>
+
+    <script src="assets/swiper-bundle.min.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const scrollUp = document.getElementById("scroll-up");
+      window.addEventListener("scroll", () => {
+        scrollUp.classList.toggle("show", window.scrollY > 400);
+      });
+    </script>
   </body>
 </html>
